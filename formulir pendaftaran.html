@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>formulir</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link href="style.css" rel="stylesheet">
+      <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+      <nav class="navbar"> 
+        <div class="container nav-container">
+            <a href="#" class="logo">Happy Cin'Cake</a>
+            <div class="Macaroon">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <ul class="nav-links active">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html #about">About</a></li>
+                <li><a href="index.html #menu">Menu</a></li>
+                <li><a href="index.html #blog">Pages</a></li>
+                <li><a href="index.html #footer">Contact</a></li>
+                <li><a href="formulir pendaftaran.html">Formulir</a></li>
+            </ul>
+        </div>
+    </nav><br><br><br><br>
+
+
+    <h2 align="center">FORMULIR</h2>
+    <form method="post">
+       <table align="center" border="1" cellspacing="10">
+        <tr>
+            <td> NIM</td>
+            <td>
+                <input type="number" name="nim" size="20"
+                placeholder="Masukkan NIM anda" required>
+            </td>
+        </tr>
+        <tr>
+            <td> NAMA</td>
+            <td>
+                <input type="text" name="nama" size="50"
+                placeholder="Masukkan nama anda" required>
+            </td>
+        </tr>
+        <tr>
+            <td> PASSWORD</td>
+            <td>
+                <input type="password" name="pswd" size="20"
+                placeholder="Masukkan password anda" required>
+            </td>
+        </tr>
+        <tr>
+            <td> ALAMAT</td>
+            <td>
+                <textarea cols="50" rows="4" name="alamat"
+                placeholder="Masukkan alamat anda" required></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td> KOTA</td>
+            <td>
+                <select>
+                    <option>--pilih kota--</option>
+                    <option>bogor</option>
+                    <option>jakarta</option>
+                    <option>tanjung priok</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td> JENIS KELAMIN</td>
+            <td>
+                <input type="radio" name="jk" value="laki laki">laki laki
+                <input type="radio" name="jk" value="perempuan">perempuan
+            </td>
+        </tr>
+        <tr>
+            <td> TANGGAL LAHIR</td>
+            <td>
+                <input type="date" name="tgl"
+            </td>
+        </tr>
+         <td> JURUSAN</td>
+            <td>
+                <select size="3">
+                    <option>informatika</option>
+                    <option>sistem informasi</option>
+                    <option>teknik industri</option>
+                    <option>manajemen</option>
+                </select>
+            </td>
+            <tr>
+            <td> HOBBY</td>
+            <td>
+                <input type="checkbox" name="hobby" value="mancing fish it">mancing fish it
+                <input type="checkbox" name="hobby" value="tidur">tidur
+                <input type="checkbox" name="hobby" value="lari">lari
+                <input type="checkbox" name="hobby" value="renang">renang
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>Rating Kepuasan anda:</p>
+                <td>
+                   <input type="radio" name="rating" value="1"> 1 Bintang 
+                   <input type="radio" name="rating" value="2"> 2 Bintang 
+                   <input type="radio" name="rating" value="3"> 3 Bintang 
+                   <input type="radio" name="rating" value="4"> 4 Bintang 
+                   <input type="radio" name="rating" value="5"> 5 Bintang <br><br>
+
+                   <input type="submit" value="Kirim">
+
+            </td>
+        </tr>
+        <tr>
+            <td> UPLOAD DOKUMEN</td>
+            <td>
+                <input type="file" name="file"
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center">
+                <input type="submit" name="submit" value="KIRIM DATA">
+
+                <input type="reset" name="reset" value="KOSONGKAN DATA">
+            </td>
+        </tr>
+       </table>
+<!-- Widget Waktu -->
+    <div class="mb-2">
+        <div style="display: inline-block; padding: 5px 15px; background: rgba(255,255,255,0.1); border-radius: 5px;">
+            <span id="simple-clock">
+                Loading waktu...
+            </span>
+        </div>
+    </div>
+    
+    © FEBRIAN ADITYA MELAGRO (251011700275) | KELAS : 01SIFP005
+    
+    <script>
+        function updateSimpleClock() {
+            var waktu = new Date();
+            
+            var jam = waktu.getHours().toString().padStart(2, '0');
+            var menit = waktu.getMinutes().toString().padStart(2, '0');
+            var waktuDisplay = jam + ":" + menit;
+            var tanggal = waktu.getDate() + "/" + 
+                         (waktu.getMonth() + 1) + "/" + 
+                         waktu.getFullYear();
+            
+            document.getElementById("simple-clock").innerHTML = 
+                tanggal + " | " + waktuDisplay;
+        }
+        
+        updateSimpleClock();
+        
+        setInterval(updateSimpleClock, 30000);
+    </script>
+</body>
+</html>
